@@ -1,4 +1,4 @@
-"use client";
+
 import SectionFrameHeading from "@/components/SectionFrameHeading";
 
 export default function O2BestPlants() {

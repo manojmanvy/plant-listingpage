@@ -1,4 +1,4 @@
-"use client";
+
 import SectionFrameHeading from "@/components/SectionFrameHeading";
 
 const reviews = [

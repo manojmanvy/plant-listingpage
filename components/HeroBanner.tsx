@@ -1,4 +1,4 @@
-"use client";
+
 import HeroReviewCard from "@/components/HeroReviewCard";
 
 export default function HeroBanner() {
