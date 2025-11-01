@@ -1,23 +1,13 @@
 "use client";
 import SectionFrameHeading from "@/components/SectionFrameHeading";
-import { motion } from "framer-motion";
 
 export default function O2BestPlants() {
   return (
     <section className="w-full max-w-5xl mx-auto pt-8 pb-12">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, type: "spring" }}
-        viewport={{ once: true }}
-      >
+      <div>
         <SectionFrameHeading>Our Best o2</SectionFrameHeading>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: 90, scale: 0.92 }}
-        whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        transition={{ duration: 0.93, type: "spring" }}
-        viewport={{ once: true, amount: 0.5 }}
+      </div>
+      <div
         className="relative flex flex-col md:flex-row items-center bg-white/10 backdrop-blur-[12px] border border-white/22 rounded-[32px] shadow-2xl px-8 py-10 w-full min-h-[340px] overflow-visible"
         style={{ boxShadow: "0 10px 44px 0 rgba(0,0,0,0.14)" }}
       >
@@ -56,7 +46,7 @@ export default function O2BestPlants() {
           <div className="w-2 h-2 rounded-full bg-white/30"></div>
           <div className="w-2 h-2 rounded-full bg-white/30"></div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,18 +1,10 @@
 "use client";
 import HeroReviewCard from "@/components/HeroReviewCard";
-import { motion } from "framer-motion";
 
 export default function HeroBanner() {
   return (
     <section className="relative w-full min-h-[820px] flex justify-between items-start max-w-[1450px] mx-auto pt-4 pb-7 bg-transparent overflow-visible">
-
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.9, type: "spring" }}
-        viewport={{ once: true }}
-        className="flex flex-col justify-start items-start z-10 pl-[3vw] pt-20"
-      >
+      <div className="flex flex-col justify-start items-start z-10 pl-[3vw] pt-20">
         <h1 className="text-[#ececec] text-[104px] font-bold leading-[102px] tracking-[-2px] drop-shadow-lg mb-3">
           Earth’s Exhale
         </h1>
@@ -40,14 +32,8 @@ export default function HeroBanner() {
         <div>
           <HeroReviewCard />
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.78, x: 120 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 0.85, type: "spring" }}
-        viewport={{ once: true }}
-        className="absolute right-[6vw] top-42 z-30"
-      >
+      </div>
+      <div className="absolute right-[6vw] top-42 z-30">
         <div
           className="relative w-[468px] h-[492px] flex flex-col rounded-[62px] border bg-white/10 backdrop-blur-[8px] shadow-2xl px-14 pb-10 overflow-visible pointer-events-auto"
           style={{
@@ -105,7 +91,7 @@ export default function HeroBanner() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

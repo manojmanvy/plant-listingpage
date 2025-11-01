@@ -1,6 +1,5 @@
 "use client";
 import SectionFrameHeading from "@/components/SectionFrameHeading";
-import { motion } from "framer-motion";
 
 const reviews = [
   {
@@ -39,23 +38,14 @@ function Stars({ count }: { count: number }) {
 export default function CustomerReview() {
   return (
     <section className="w-full max-w-5xl mx-auto pt-8 pb-12">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, type: "spring" }}
-        viewport={{ once: true }}
-      >
+      <div>
         <SectionFrameHeading>Customer Review</SectionFrameHeading>
-      </motion.div>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {reviews.map((r, idx) => (
-          <motion.div
+          <div
             key={idx}
-            initial={{ opacity: 0, y: 60, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.85 + idx * 0.07, delay: idx * 0.09, type: "spring" }}
-            viewport={{ once: true, amount: 0.45 }}
             className={`${r.color} rounded-[32px] border border-white/20 shadow-xl backdrop-blur-[10px] p-6 flex flex-col items-start`}
             style={{ boxShadow: "0 6px 38px 0 rgba(0,0,0,0.16)" }}
           >
@@ -70,7 +60,7 @@ export default function CustomerReview() {
             </div>
             <Stars count={r.stars} />
             <div className="text-white/80 text-base font-normal mt-2">{r.review}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

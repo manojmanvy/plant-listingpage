@@ -1,6 +1,5 @@
 "use client";
 import SectionFrameHeading from "@/components/SectionFrameHeading";
-import { motion } from "framer-motion";
 
 const trendyPlants = [
   {
@@ -22,38 +21,19 @@ const trendyPlants = [
 export default function TrendyPlants() {
   return (
     <section className="max-w-5xl mx-auto w-full relative z-10 flex flex-col gap-8 pb-14">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, type: "spring" }}
-        viewport={{ once: true }}
-      >
+      <div>
         <SectionFrameHeading>Our Trendy plants</SectionFrameHeading>
-      </motion.div>
+      </div>
       <div className="flex flex-col gap-10 w-full">
-        <motion.div
-          initial={{ opacity: 0, x: -100, scale: 0.88 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.9, type: "spring" }}
-          viewport={{ once: true, amount: 0.5 }}
+        <div
           className="relative flex flex-col md:flex-row items-center bg-white/8 border border-white/25 rounded-[40px] min-h-[220px] overflow-visible shadow-2xl backdrop-blur-md"
           style={{
             boxShadow: "0 6px 30px 0 rgba(0,0,0,0.17)",
           }}
         >
-          <motion.img
+          <img
             src={trendyPlants[0].img}
             alt={trendyPlants[0].title}
-            initial={{ opacity: 0, x: -90, scale: 0.7, rotate: -8 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
-            transition={{
-              type: "spring",
-              duration: 0.93,
-              bounce: 0.48,
-              delay: 0.10,
-              stiffness: 70
-            }}
-            viewport={{ once: true, amount: 0.7 }}
             className="h-[320px] w-[295px] object-contain absolute left-[-32px] md:left-[-42px] -top-[66px] select-none pointer-events-none"
             draggable={false}
             style={{ zIndex: 2 }}
@@ -71,30 +51,16 @@ export default function TrendyPlants() {
               </button>
             </div>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 120, scale: 0.88 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.9, type: "spring" }}
-          viewport={{ once: true, amount: 0.5 }}
+        </div>
+        <div
           className="relative flex flex-col md:flex-row-reverse items-center bg-white/8 border border-white/25 rounded-[40px] min-h-[220px] overflow-visible shadow-2xl backdrop-blur-md"
           style={{
             boxShadow: "0 6px 30px 0 rgba(0,0,0,0.17)",
           }}
         >
-          <motion.img
+          <img
             src={trendyPlants[1].img}
             alt={trendyPlants[1].title}
-            initial={{ opacity: 0, x: 90, scale: 0.74, rotate: 11 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
-            transition={{
-              type: "spring",
-              duration: 0.93,
-              bounce: 0.50,
-              delay: 0.19,
-              stiffness: 67
-            }}
-            viewport={{ once: true, amount: 0.7 }}
             className="h-[350px] w-[290px] object-contain absolute right-[-35px] md:right-[-44px] -top-[66px] select-none pointer-events-none"
             draggable={false}
             style={{ zIndex: 2 }}
@@ -112,7 +78,7 @@ export default function TrendyPlants() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

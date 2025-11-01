@@ -1,13 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.92, type: "spring" }}
-      viewport={{ once: true, amount: 0.6 }}
+    <footer
       className="w-full max-w-7xl mx-auto pb-7 pt-14 px-5 text-white mt-10"
     >
       <div className="flex flex-col md:flex-row md:justify-between gap-8 border-t border-white/10 pt-10">
@@ -47,6 +42,6 @@ export default function Footer() {
       <div className="mt-8 text-center text-white/60 text-[14px]">
         FloraVision © all right reserve
       </div>
-    </motion.footer>
+    </footer>
   );
 }
