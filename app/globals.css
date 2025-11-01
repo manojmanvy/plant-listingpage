@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.my-polygon {
+  width: 48px;
+  height: 48px;
+  background: #3c634d; 
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.my-hex {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+}
+
+.my-ellipse {
+  width: 80px;
+  height: 40px;
+  background: #9cd1a7;
+  border-radius: 50%;
+  filter: blur(1px);
+
+}
+
+.frosted-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 2px solid #fff7;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.17);
+}
+
